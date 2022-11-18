@@ -1,0 +1,159 @@
+:root {
+    /* section values */
+    --section-pad1: 10vw;
+    --section-pad2: 25px;
+
+    /* color pallette */
+    --primary-color: darkblue;
+    --secondary-color: lightblue;
+    --tertiary-color: white;
+    --alt-color1: white;
+    --alt-color2: gainsboro;
+
+    /* photo values */
+    --border-rad: 5%;
+    --photo-min-width: 10rem;
+    --photo-width: 85%;
+
+    --paragraph-spacing: 5px;
+
+}
+
+
+/*      =====       Base Formatting     =====       */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    padding-left: var(--section-pad1);
+    padding-right: var(--section-pad1);
+    padding-bottom: var(--section-pad2);
+    padding-top: var(--section-pad2);
+    margin: 0;
+}
+
+p {
+    margin-bottom: var(--paragraph-spacing);
+}
+
+
+/*      =====     Alternating Colors    =====       */
+
+section:nth-child(2n) {
+    background-color: var(--alt-color1);
+}
+
+section:nth-child(2n+3) {
+    background-color: var(--alt-color2);
+}
+
+
+/*      =====       Menu Styling        =====       */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    z-index: 5;
+    
+    width: fit-content;
+    border-radius: 0px 0px 10px 10px;  
+    background-color: var(--tertiary-color);  
+}
+
+header > ul {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin:1%;
+}
+
+header > ul > li {
+    display: inline-block;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+header > ul > li > a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+/*      =====       Intro Styling       =====       */
+
+#intro-grid {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    min-height: 100vh;
+    min-width: 78vw;
+    padding-top: 0;
+    background-color: var(--secondary-color);
+}
+
+#intro-grid > div {
+    text-align: center;
+}
+
+#name-title {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#about {
+    grid-row: 2;
+}
+
+#photo-div {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 2;
+}
+
+#profile-photo {
+    border-radius: var(--border-rad);
+
+    min-width: var(--photo-min-width);
+    width: var(--photo-width);
+    height: auto;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/*      =====       Skill Styling       =====       */
+
+#skills > ul {
+    padding: 0;
+    text-align: justify;
+}
+
+#skills > ul > li {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 2px;
+    background-color: var(--secondary-color);
+}
+
+
+/*      =====       Footer Styling       =====       */
+
+footer {
+    min-height: 50px;
+    background-color: var(--secondary-color);
+}
