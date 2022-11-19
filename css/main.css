@@ -97,7 +97,7 @@ header > ul > li > a {
     min-height: 100vh;
     padding-top: 0;
     
-    background-image: url(../images/sunflowers_bg.png);
+    background-image: url(../images/sunflowers_bg_min.png);
     background-size: auto 100%;
 
     align-items: center;
