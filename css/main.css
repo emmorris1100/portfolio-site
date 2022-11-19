@@ -4,18 +4,20 @@
     --section-pad2: 25px;
 
     /* color pallette */
-    --primary-color: darkblue;
-    --secondary-color: lightblue;
+    --primary-color: #5C4033;
+    --secondary-color: #FCE883;
     --tertiary-color: white;
     --alt-color1: white;
-    --alt-color2: gainsboro;
+    --alt-color2: 	#FBF6D9;
 
     /* photo values */
     --border-rad: 5%;
     --photo-min-width: 10rem;
-    --photo-width: 85%;
+    --photo-width: 35vw;
 
+    /* common spacing values */
     --paragraph-spacing: 5px;
+    --standard-spacing: 1rem;
 
 }
 
@@ -57,7 +59,6 @@ section:nth-child(2n+3) {
 /*      =====       Menu Styling        =====       */
 header {
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
     margin-right: auto;
@@ -67,14 +68,13 @@ header {
     
     width: fit-content;
     border-radius: 0px 0px 10px 10px;  
-    background-color: var(--tertiary-color);  
+    background-color: var(--tertiary-color);
 }
 
 header > ul {
     padding: 0;
-    text-align: center;
     width: 100%;
-    margin:1%;
+    margin: 1%;
 }
 
 header > ul > li {
@@ -92,35 +92,42 @@ header > ul > li > a {
 /*      =====       Intro Styling       =====       */
 
 #intro-grid {
-    display: inline-grid;
-    grid-template-columns: auto auto;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
     min-height: 100vh;
-    min-width: 78vw;
     padding-top: 0;
-    background-color: var(--secondary-color);
+    
+    background-image: url(../images/sunflowers_bg.png);
+    background-size: auto 100%;
+
+    align-items: center;
+    justify-content: center;
+
 }
 
 #intro-grid > div {
     text-align: center;
+    margin-right: var(--standard-spacing);
+    margin-left: var(--standard-spacing);
 }
 
-#name-title {
-    grid-row: 1;
+#black-box {
+    padding: 2rem;
+    min-width: 10rem;
+
+    background: rgba(0,0,0,0.85);
+    color:white;
+    border-radius: var(--border-rad);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+
 }
 
-#about {
-    grid-row: 2;
-}
-
-#photo-div {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column: 2;
+#name-title {
+    padding-bottom: var(--standard-spacing);
 }
 
 #profile-photo {
@@ -129,10 +136,6 @@ header > ul > li > a {
     min-width: var(--photo-min-width);
     width: var(--photo-width);
     height: auto;
-
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 
