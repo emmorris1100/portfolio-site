@@ -8,12 +8,16 @@
     --secondary-color: #FCE883;
     --tertiary-color: white;
     --alt-color1: white;
-    --alt-color2: 	#FBF6D9;
+    --alt-color2: #FBF6D9;
+
+    /* font values */
+    --h1-size: 24px;
+    --h2-size: 18px;
 
     /* photo values */
     --border-rad: 5%;
     --photo-min-width: 10rem;
-    --photo-width: 35vw;
+    --photo-width: 20vw;
 
     /* common spacing values */
     --paragraph-spacing: 5px;
@@ -30,6 +34,21 @@ html {
 
 body {
     margin: 0;
+    background: black;
+}
+
+main {
+    width: max(75vw, 500px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
 }
 
 section {
@@ -94,11 +113,11 @@ header > ul > li > a {
 #intro-grid {
     display: flex;
     flex-direction: row;
-    min-height: 100vh;
+    min-height: 98vh;
     padding-top: 0;
     
     background-image: url(../images/sunflowers_bg_min.png);
-    background-size: auto 100%;
+    background-size: auto 105%;
 
     align-items: center;
     justify-content: center;
@@ -141,16 +160,21 @@ header > ul > li > a {
 
 /*      =====       Skill Styling       =====       */
 
-#skills > ul {
+.skill-section > ul {
     padding: 0;
-    text-align: justify;
+    text-align: center;
 }
 
-#skills > ul > li {
+.skill-section > ul > li {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px 10px;
     margin: 2px;
     background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+#software > ul > li {
+    padding: 5px 12px;
 }
 
 
